@@ -10,7 +10,7 @@
 This will start the web app in localhost:3000
 
 ### Run the proxy server in another terminal
-`$ node cypress/proxy.js`
+`$ node proxy.js`
 
 This will start a proxy server in 8081 port
 
