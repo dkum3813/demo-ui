@@ -12,53 +12,12 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-const nock = require("nock");
-
 /**
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
 module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
-    on('task', {
-        log(message) {
-            console.log(message)
-
-            return null
-        },
-        clearNock() {
-            nock.restore();
-            nock.cleanAll();
-
-            return null;
-        },
-        async nock({ hostname, method, path, statusCode, body }) {
-            // nock.activate();
-
-            console.log(
-                'nock will: %s %s%s respond with %d %o',
-                method,
-                hostname,
-                path,
-                statusCode,
-                body
-            );
-
-            // add one-time network stub like
-            method = method.toLowerCase();
-            // nock(hostname)[method](path).reply(statusCode, body);
-            nock(hostname)[method](path)
-                .query(true)
-                .reply((uri, requestBody) => {
-                    console.log('nock uri', uri)
-                    return [
-                        statusCode,
-                        body
-                    ]
-                })
-
-            return null;
-        }
-    })
+    // `on` is used to hook into various events Cypress emits
+    // `config` is the resolved Cypress config
+    on('task', {})
 }

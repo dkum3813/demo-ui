@@ -1,5 +1,8 @@
 const http = require("http");
 const axios = require("axios")
+const nock = require('nock');
+const {useNockBack, getNockBackJsonPath} = require("./nockBackConfig");
+
 
 const proxyServer = (port) => {
     if (port === undefined || typeof port !== "number") {
@@ -11,7 +14,14 @@ const proxyServer = (port) => {
             delete req.headers.accept
             let response
             try {
-                response = await axios(req)
+                const url = new URL(req.url)
+                if (useNockBack(url)) {
+                    const {nockDone} = await nock.back(getNockBackJsonPath(url));
+                    response = await axios(req)
+                    nockDone()
+                } else {
+                    response = await axios(req)
+                }
             } catch (error) {
                 response = error.response
             }

@@ -1,0 +1,80 @@
+[
+    {
+        "scope": "http://appserverdemo-env.eba-mpdm2ns3.us-west-1.elasticbeanstalk.com:80",
+        "method": "GET",
+        "path": "/bookings/current",
+        "body": "",
+        "status": 200,
+        "response": {
+            "id": 1000,
+            "user": {
+                "firstName": "John",
+                "lastName": "Martin",
+                "email": "john.martin@xygmailtest.com",
+                "userName": "john1212",
+                "address": "123/Y, Darly Road, Colombo",
+                "country": "Sri Lanka",
+                "city": "Colombo"
+            },
+            "bookingItems": [
+                {
+                    "id": 10001,
+                    "name": "Milo",
+                    "unitPrice": 90,
+                    "quantity": 3,
+                    "price": 270,
+                    "discount": 0
+                },
+                {
+                    "id": 10003,
+                    "name": "Leo Coffee",
+                    "unitPrice": 1600,
+                    "quantity": 10,
+                    "price": 16000,
+                    "discount": 0
+                },
+                {
+                    "id": 10004,
+                    "name": "Hand Wash",
+                    "unitPrice": 1600,
+                    "quantity": 1,
+                    "price": 1600,
+                    "discount": 0
+                },
+                {
+                    "id": 10006,
+                    "name": "XY Chocolate",
+                    "unitPrice": 2000,
+                    "quantity": 5,
+                    "price": 10000,
+                    "discount": 0
+                },
+                {
+                    "id": 10007,
+                    "name": "Hand Wash",
+                    "unitPrice": 400,
+                    "quantity": 6,
+                    "price": 2400,
+                    "discount": 0
+                }
+            ],
+            "totalPrice": 30270,
+            "discount": 0,
+            "finalPrice": 30270,
+            "loadedTime": "2022-09-01 12:11:29"
+        },
+        "rawHeaders": [
+            "Date",
+            "Thu, 01 Sep 2022 06:41:29 GMT",
+            "Content-Type",
+            "application/json",
+            "Transfer-Encoding",
+            "chunked",
+            "Connection",
+            "keep-alive",
+            "Server",
+            "nginx/1.20.0"
+        ],
+        "responseIsBinary": false
+    }
+]
