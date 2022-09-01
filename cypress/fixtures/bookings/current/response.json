@@ -21,17 +21,17 @@
                     "id": 10001,
                     "name": "Milo",
                     "unitPrice": 90,
-                    "quantity": 3,
-                    "price": 270,
+                    "quantity": 7,
+                    "price": 630,
                     "discount": 0
                 },
                 {
-                    "id": 10003,
-                    "name": "Leo Coffee",
-                    "unitPrice": 1600,
-                    "quantity": 10,
-                    "price": 16000,
-                    "discount": 0
+                    "id": 10002,
+                    "name": "CocaCola",
+                    "unitPrice": 300,
+                    "quantity": 5,
+                    "price": 1500,
+                    "discount": 250
                 },
                 {
                     "id": 10004,
@@ -42,30 +42,38 @@
                     "discount": 0
                 },
                 {
+                    "id": 10005,
+                    "name": "GT Spice",
+                    "unitPrice": 800,
+                    "quantity": 7,
+                    "price": 5600,
+                    "discount": 0
+                },
+                {
                     "id": 10006,
                     "name": "XY Chocolate",
                     "unitPrice": 2000,
-                    "quantity": 5,
-                    "price": 10000,
+                    "quantity": 2,
+                    "price": 4000,
                     "discount": 0
                 },
                 {
                     "id": 10007,
                     "name": "Hand Wash",
                     "unitPrice": 400,
-                    "quantity": 6,
-                    "price": 2400,
+                    "quantity": 5,
+                    "price": 2000,
                     "discount": 0
                 }
             ],
-            "totalPrice": 30270,
-            "discount": 0,
-            "finalPrice": 30270,
-            "loadedTime": "2022-09-01 12:11:29"
+            "totalPrice": 15330,
+            "discount": 250,
+            "finalPrice": 15080,
+            "loadedTime": "2022-09-01 12:48:42"
         },
         "rawHeaders": [
             "Date",
-            "Thu, 01 Sep 2022 06:41:29 GMT",
+            "Thu, 01 Sep 2022 07:18:42 GMT",
             "Content-Type",
             "application/json",
             "Transfer-Encoding",
