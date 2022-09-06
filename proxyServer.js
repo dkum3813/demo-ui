@@ -23,7 +23,8 @@ const proxyServer = (port) => {
                     response = await axios(req)
                 }
             } catch (error) {
-                response = error.response
+                response = error.response;
+                console.error(`Error: ${error}`);
             }
             if (response) {
                 let content = response.data;
